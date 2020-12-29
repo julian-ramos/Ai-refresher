@@ -20,6 +20,7 @@ Covers lots of topics including Ai and ML
 ## Data Science
 
 Cover tools for data retrieval (SQL), manipulation (python,R)  and visualization (R.python)
+
 [Cheat sheet](https://www.mit.edu/~amidi/teaching/data-science-tools/)
 
 ## Probability and Statistics
