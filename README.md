@@ -23,4 +23,5 @@ Cover tools for data retrieval (SQL), manipulation (python,R)  and visualization
 [Cheat sheet](https://www.mit.edu/~amidi/teaching/data-science-tools/)
 
 ## Probability and Statistics
-[Cheat sheet](https://stanford.edu/~shervine/teaching/cme-106/
+
+[Cheat sheet](https://stanford.edu/~shervine/teaching/cme-106/)
