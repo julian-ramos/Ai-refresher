@@ -19,7 +19,7 @@ This repository is a bunch of links with key information to review the basics of
 <img src="https://render.githubusercontent.com/render/math?math=\Large \frac{2\cdot tp}{2\cdot tp%2Bfp%2Bfn}">
 
 ### Statistics 
-The null hypothesis involves the absence of a difference or the absence of an association. For classification: Positive is the alternative hypothesis, Negative =si the Null hypothesis.
+The null hypothesis involves the absence of a difference or the absence of an association. For classification: Positive is the alternative hypothesis, Negative is the Null hypothesis.
 
 **Type I error**
 
