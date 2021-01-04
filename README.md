@@ -46,9 +46,20 @@ The next includes supervised and unsupervised learning, deep learning, tips and 
 [ML Cheat sheet](https://stanford.edu/~shervine/teaching/cs-229/)
 
 ## Deep Learning
+
 Convolutional and recurrent neural networks explained and some tips and tricks.
 
 [DL Cheat sheet](https://stanford.edu/~shervine/teaching/cs-230/)
+
+### Activation functions
+- ReLU
+It has some biological basis. Ignores negative values
+
+- Leaky ReLu
+Similar to ReLU but it uses negative values, although with a smaller weight than positive values.
+
+- ELU
+Same as ReLU for positive values. For negative values it uses an exponential. It has been shown to perform better than other common activation functions and even beat ReLU.
 
 ## Data Science
 
