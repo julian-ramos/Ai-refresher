@@ -63,7 +63,11 @@ Same as ReLU for positive values. For negative values it uses an exponential. It
 
 ### Loss functions
 - Wasserstein Loss
-Used for GANs because it helps with mode collapse in vanishing gradients. Similar to BCE but it is not limited to 0 - 1 values and can vary to -infinity to +infinity
+Used for GANs because it helps with mode collapse in vanishing gradients. Similar to BCE but it is not limited to 0 - 1 values and can vary to -infinity to +infinity. To use W loss, the critic or discriminator needs to be 1-Lipschitz continuous. A way to enforce this is by clipping the weight values but that could limit learning. Instead, it is used a regularization term in the loss.
+
+### Batch normalization
+- Bath normalization Weights are normalized to zero mean and a defined standard deviation
+- [Spectral normalization (miyato et al)](https://arxiv.org/pdf/1802.05957.pdf) Weights are divided by the spectral norm
 
 ## Data Science
 
