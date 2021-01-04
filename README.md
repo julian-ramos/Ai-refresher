@@ -61,6 +61,10 @@ Similar to ReLU but it uses negative values, although with a smaller weight than
 - ELU
 Same as ReLU for positive values. For negative values it uses an exponential. It has been shown to perform better than other common activation functions and even beat ReLU.
 
+### Loss functions
+- Wasserstein Loss
+Used for GANs because it helps with mode collapse in vanishing gradients. Similar to BCE but it is not limited to 0 - 1 values and can vary to -infinity to +infinity
+
 ## Data Science
 
 Cover tools for data retrieval (SQL), manipulation (python,R)  and visualization (R.python)
