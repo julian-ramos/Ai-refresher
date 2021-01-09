@@ -2,6 +2,8 @@
 
 This repository is a bunch of links with key information to review the basics of Artificial Intelligence and Data Science. Links marked as Cheat sheets do not have any in deep review however present the key ideas and are a good starting point for deciding which topics to review in depth.
 
+[All of AI notes, website, videos and more](https://aman.ai/)
+
 ## Basic equations and concepts
 
 ### Error
