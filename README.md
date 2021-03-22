@@ -67,13 +67,16 @@ Same as ReLU for positive values. For negative values it uses an exponential. It
 
 -Binary cross-entropy
 This loss uses as error measure cross-entropy which is defined as:
+
 <img src="https://render.githubusercontent.com/render/math?math=\Large CE= \sum_{x\in X} p(x) \cdot log(q(x))">
 
 Where p(x) is the probability of the label (usually one or zero) and q(x) is the normalized (0,1) output from the neural network.
 For the binary classification problem, the output of the network is a sigmoid and so the cross-entropy loss becomes:
+
 <img src="https://render.githubusercontent.com/render/math?math=\Large CE= -t_i \cdot log(f(s_i) -(1-t_i) \cdot log(1-f(s_i) ">
 
 Where
+
 <img src="https://render.githubusercontent.com/render/math?math=\Large f(s_i)=\frac{1}{1+e^{-s_i}} ">
 
 
