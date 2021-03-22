@@ -92,7 +92,21 @@ Where i is the index for the class that is positive. The complete equation uses 
 #### Wasserstein Loss
 Used for GANs because it helps with mode collapse in vanishing gradients. Similar to BCE but it is not limited to 0 - 1 values and can vary to -infinity to +infinity. To use W loss, the critic or discriminator needs to be 1-Lipschitz continuous. A way to enforce this is by clipping the weight values but that could limit learning. Instead, it is used a regularization term in the loss.
 
-### Types of Layers
+### Types of Layers (from tf.keras.layers)
+
+#### Dense
+- *How:* Typical hidden layer where all inputs all connected to all nodes. 
+- *Why:* Used in places where combination of features are of interest. 
+- *Where:* They are typically used near the output layers after CNN or RNN layers
+- *When:* Used in most datasets.
+
+
+#### CNN
+- *How:* (Usually) Multiple convolution filters are applied to an input. The convolution can be in 1D, 2D or 3D. 
+- *Why:* A convolution filter has associated weights which can discover
+- *Where:* They are typically used near the output layers after CNN or RNN layers
+- *When:* Used in most datasets.
+
 
 #### Dropout
 - *How:* Makes output of a layer zero in a random fashion. 
