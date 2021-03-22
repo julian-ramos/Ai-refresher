@@ -83,7 +83,7 @@ Where
 - Categorical cross-entropy
 
 The loss using cross entropy for multiple classes and using a softmax output becomes
-<img src="https://render.githubusercontent.com/render/math?math=\Large CE= log(\frac{e^{s_i}}{\sum_{j\in J} e^{s_j} )">
+<img src="https://render.githubusercontent.com/render/math?math=\Large CE= log(\frac{ e^{s_i} }{\sum_{j\in J} e^{s_j}} )">
 Where i is the index for the class that is positive. The complete equation uses a vector that one hot encode the class, but since all elements of the vector are zero except i, the above is the resulting equation.
 
 
