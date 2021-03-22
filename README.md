@@ -64,6 +64,11 @@ Similar to ReLU but it uses negative values, although with a smaller weight than
 Same as ReLU for positive values. For negative values it uses an exponential. It has been shown to perform better than other common activation functions and even beat ReLU.
 
 ### Loss functions
+- Categorical cross-entropy
+This losses uses as error measure cross-entropy which is defined as:
+<img src="https://render.githubusercontent.com/render/math?math=\Large CS= \sum_{x\in X} p(x) \cdot log(q(x))">
+
+
 - Wasserstein Loss
 Used for GANs because it helps with mode collapse in vanishing gradients. Similar to BCE but it is not limited to 0 - 1 values and can vary to -infinity to +infinity. To use W loss, the critic or discriminator needs to be 1-Lipschitz continuous. A way to enforce this is by clipping the weight values but that could limit learning. Instead, it is used a regularization term in the loss.
 
