@@ -54,18 +54,18 @@ Convolutional and recurrent neural networks explained and some tips and tricks.
 [DL Cheat sheet](https://stanford.edu/~shervine/teaching/cs-230/)
 
 ### Activation functions
-####ReLU
+- ReLU
 It has some biological basis. Ignores negative values
 
-####Leaky ReLu
+- Leaky ReLu
 Similar to ReLU but it uses negative values, although with a smaller weight than positive values.
 
-####ELU
+- ELU
 Same as ReLU for positive values. For negative values it uses an exponential. It has been shown to perform better than other common activation functions and even beat ReLU.
 
 ### Loss functions
 
-####Binary cross-entropy
+-Binary cross-entropy
 This loss uses as error measure cross-entropy which is defined as:
 
 <img src="https://render.githubusercontent.com/render/math?math=\Large CE= \sum_{x\in X} p(x) \cdot log(q(x))">
@@ -80,7 +80,7 @@ Where
 <img src="https://render.githubusercontent.com/render/math?math=\Large f(s_i)=\frac{1}{1%2Be^{-s_i}} ">
 
 
-####Categorical cross-entropy
+- Categorical cross-entropy
 
 The loss using cross entropy for multiple classes and using a softmax output becomes:
 
@@ -89,14 +89,14 @@ The loss using cross entropy for multiple classes and using a softmax output bec
 Where i is the index for the class that is positive. The complete equation uses a vector that one hot encode the class, but since all elements of the vector are zero except i, the above is the resulting equation.
 
 
-####Wasserstein Loss
+- Wasserstein Loss
 Used for GANs because it helps with mode collapse in vanishing gradients. Similar to BCE but it is not limited to 0 - 1 values and can vary to -infinity to +infinity. To use W loss, the critic or discriminator needs to be 1-Lipschitz continuous. A way to enforce this is by clipping the weight values but that could limit learning. Instead, it is used a regularization term in the loss.
 
 ### Types of Layers
 
 #### Dropout
-- *How:* Makes outputs of a layer zero in a random fashion. 
-- *Why:* To prevent overfitting by forcing the network to not rely on all features all the time. 
+- *How:* Makes output of a layer zero in a random fashion. 
+- *Why:* To prevent overfitting by forcing the network to not rely an all features all the time. 
 - *Where:* After any dense layer, CNN or RNN. 
 - *When:* It helps in all situatiotions but it is most useful with small datasets where chances of overfitting are high.
 - 
@@ -106,6 +106,15 @@ Used for GANs because it helps with mode collapse in vanishing gradients. Simila
 - *Where:* Commonly used after a CNN layer and before a non-linearity layer.
 - *When:* It can be used anytime **except** after a dropout layer. In such case the dropout has an effect on the batch normalization statistics that can introduce noise. Also, it is not adequate when the values are highligh non-gaussian.
 - [Spectral normalization (miyato et al)](https://arxiv.org/pdf/1802.05957.pdf) Weights are divided by the spectral norm
+
+#### Pooling
+
+- *How:* Applies an specified function (e.g, max, min, avg) to a patch of the input. A 2x2 patch with a stride of 2, reduces the input to by half, a 3x3 batch with stride of 3 reduces the input by a third. 
+- *Why (general):* Reduces complexity.
+- *Why (average pooling):* Smooths out the data, in an image it will help ignore sharp features of the image. 
+- *Why (Max pooling):* Keeps the max only and helps detect sharp features.
+- *Where:* After a convolution layer
+- *When:* It helps ignoring or highlighting some components of the input.
 
 ## Data Science
 
