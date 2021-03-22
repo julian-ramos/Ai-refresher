@@ -77,7 +77,7 @@ For the binary classification problem, the output of the network is a sigmoid an
 
 Where
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large f(s_i)=\frac{1}{1+e^{-s_i}} ">
+<img src="https://render.githubusercontent.com/render/math?math=\Large f(s_i)=\frac{1}{1%2Be^{-s_i}} ">
 
 
 - Categorical cross-entropy
