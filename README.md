@@ -92,8 +92,19 @@ Where i is the index for the class that is positive. The complete equation uses 
 - Wasserstein Loss
 Used for GANs because it helps with mode collapse in vanishing gradients. Similar to BCE but it is not limited to 0 - 1 values and can vary to -infinity to +infinity. To use W loss, the critic or discriminator needs to be 1-Lipschitz continuous. A way to enforce this is by clipping the weight values but that could limit learning. Instead, it is used a regularization term in the loss.
 
-### Batch normalization
-- Bath normalization Weights are normalized to zero mean and a defined standard deviation
+### Types of Layers
+
+#### Dropout
+- *How:* Makes output of a layer zero in a random fashion. 
+- *Why:* To prevent overfitting by forcing the network to not rely an all features all the time. 
+- *Where:* After any dense layer, CNN or RNN. 
+- *When:* It helps in all situatiotions but it is most useful with small datasets where chances of overfitting are high.
+- 
+#### Batch normalization
+- *How:* Batch normalization Weights are normalized to zero mean and a defined standard deviation.
+- *Why:* Helps with learning rate and decreases dependence on initialization values. It also has a regularization effect.
+- *Where:* Commonly used after a CNN layer and before a non-linearity layer.
+- *When:* It can be used anytime **except** after a dropout layer. In such case the dropout has an effect on the batch normalization statistics that can introduce noise. Also, it is not adequate when the values are highligh non-gaussian.
 - [Spectral normalization (miyato et al)](https://arxiv.org/pdf/1802.05957.pdf) Weights are divided by the spectral norm
 
 ## Data Science
