@@ -1,4 +1,4 @@
-# Ai-refresher
+# Ai-refresher + related stuff
 
 This repository is a bunch of links with key information to review the basics of Artificial Intelligence and Data Science. Links marked as Cheat sheets do not have any in deep review however present the key ideas and are a good starting point for deciding which topics to review in depth.
 
@@ -135,5 +135,10 @@ Used for GANs because it helps with mode collapse in vanishing gradients. Simila
 Cover tools for data retrieval (SQL), manipulation (python,R)  and visualization (R.python)
 
 [Cheat sheet](https://www.mit.edu/~amidi/teaching/data-science-tools/)
+
+## Signal procession and ML
+[Signal processing course in Jupyter](https://dartbrains.org/content/Instructors.html)
+[Machine Learning for signal processing CMU](http://www.cs.cmu.edu/~11755/lectures/lectures.html)
+[Machine Learning for Signal Processing CMU 2020](https://teamia.io/)
 
 
