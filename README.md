@@ -50,6 +50,7 @@ The next includes supervised and unsupervised learning, deep learning, tips and 
 ## Deep Learning
 
 Convolutional and recurrent neural networks explained and some tips and tricks.
+For a great summary of different DL architectures and sample code check [link](https://github.com/rasbt/deeplearning-models)
 
 [DL Cheat sheet](https://stanford.edu/~shervine/teaching/cs-230/)
 
