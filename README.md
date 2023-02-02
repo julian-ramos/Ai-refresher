@@ -9,27 +9,33 @@ This repository is a bunch of links with key information to review the basics of
 ### Error
 
 **Precision**
+<body>
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large \frac{tp}{tp%2Bfp}">
+$$ \Large \frac{tp}{tp+fp} $$
 
 **Recall**
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large \frac{tp}{tp%2Bfn}">
+$$\Large \frac{tp}{tp+fn} $$
 
 **F1_score**
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large \frac{2\cdot tp}{2\cdot tp%2Bfp%2Bfn}">
+$$ \Large 2 \cdot \frac{\cdot precission \cdot recall}{(precision+recall)} $$
+
+$$ \Large \frac{2 \cdot tp}{2\cdot tp+fp+fn}$$
+
 
 ### Statistics 
-The null hypothesis involves the absence of a difference or the absence of an association. For classification: Positive is the alternative hypothesis, Negative is the Null hypothesis.
+The null hypothesis involves the absence of a difference or the absence of an association. For classification: Predicting a positive is the alternative hypothesis, predicting a negative is the Null hypothesis.
 
 **Type I error**
 
-Rejection of a true null hypothesis as the result of a test procedure. False positive.
+
+
+Mistaken rejection of the null hypothesis when it holds true. To explain how it works in machine learning, lets assume we have a negative sample as input to a classifier and the classifier predicts the input is a positive. By predicting the input is a positive, the classifier is rejecting th hypothesis that the sample is negative, in other words is rejecting the null hypothesis. Since the hypothesis was true, this is a type I error. In summary a type I error means getting a false positive.
 
 **Type II error**
 
-Failure to reject a false null hypothesis. False negative.
+Mistaken failure to reject the null hypothesis when it is false. Now lets assume a classifier gets as input a positive sample and predicts that this is a negative sample. The predictiong of a negative sample means the classifier is accepting the null hypothesis or not to rejecting it. However, the null hypothesis is false, the input is a positive then this is a type II error. In other words a type II error is a false negative.
 
 
 # Cheat Sheets
@@ -70,23 +76,23 @@ Same as ReLU for positive values. For negative values it uses an exponential. It
 #### Binary cross-entropy
 This loss uses as error measure cross-entropy which is defined as:
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large CE= \sum_{x\in X} p(x) \cdot log(q(x))">
+$$ \Large CE= \sum_{x\in X} p(x) \cdot log(q(x)) $$
 
 Where p(x) is the probability of the label (usually one or zero) and q(x) is the normalized (0,1) output from the neural network.
 For the binary classification problem, the output of the network is a sigmoid and so the cross-entropy loss becomes:
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large CE= -t_i \cdot log(f(s_i) -(1-t_i) \cdot log(1-f(s_i) ">
+$$ \Large CE= -t_i \cdot log(f(s_i) -(1-t_i) \cdot log(1-f(s_i))$$
 
 Where
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large f(s_i)=\frac{1}{1%2Be^{-s_i}} ">
+$$ \Large f(s_i)=\frac{1}{1%2Be^{-s_i}} $$
 
 
 #### Categorical cross-entropy
 
 The loss using cross entropy for multiple classes and using a softmax output becomes:
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large CE= log(\frac{ e^{s_i} }{\sum_{j\in J} e^{s_j}} )">
+$$\Large CE= log(\frac{ e^{s_i} }{\sum_{j\in J} e^{s_j}} ) $$
 
 Where i is the index for the class that is positive. The complete equation uses a vector that one hot encode the class, but since all elements of the vector are zero except i, the above is the resulting equation.
 
