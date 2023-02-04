@@ -23,6 +23,10 @@ $$ \Large 2 \cdot \frac{\cdot precission \cdot recall}{(precision+recall)} $$
 
 $$ \Large \frac{2 \cdot tp}{2\cdot tp+fp+fn}$$
 
+### Linear algebra
+- Rank: Number of dimensions spanned by the matrix columns which is the same as the number of lineraly independent columns. This number is the same also for the row vectors.
+
+- Full rank: The rank is the same as the number of columns or rows (the lesser of the two). It can be also called full column rank or full row rank.
 
 ### Statistics 
 The null hypothesis involves the absence of a difference or the absence of an association. For classification: Predicting a positive is the alternative hypothesis, predicting a negative is the Null hypothesis.
